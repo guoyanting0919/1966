@@ -1,0 +1,155 @@
+.driverMain,
+.convoyMain {
+  padding-bottom: 40px;
+
+  .section-title {
+    span {
+      color: $color-communication;
+    }
+    .color-line {
+      background: $color-communication;
+    }
+  }
+
+  .area-category {
+    margin-bottom: 16px;
+
+    p,
+    a {
+      border-color: $color-communication;
+    }
+
+    p {
+      color: $color-communication;
+    }
+
+    a {
+      background: $color-communication;
+
+      &:hover {
+        background: darken($color-communication, 8);
+      }
+    }
+  }
+
+  .driver-menu {
+    margin-top: 40px;
+    margin-bottom: 48px;
+  }
+
+  .card {
+    height: 400px;
+    cursor: pointer;
+    // @include rwd($screen-xl) {
+    //   height: 352px;
+    // }
+    // @include rwd($screen-lg) {
+    //   height: 314px;
+    // }
+
+    .cardDriverImage {
+      background-image: url("./img/communication_thumb01.png");
+      width: 100%;
+      height: 80%;
+      background-position: 50% 25%;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    &.communication {
+      border-radius: 16px;
+      overflow: hidden;
+
+      img {
+        // display: block;
+        width: 100%;
+      }
+    }
+
+    .card__content {
+      position: absolute;
+      height: 20%;
+      width: 100%;
+      overflow: hidden;
+      transition: 0.5s;
+      bottom: 0;
+      background: $color-communication;
+      box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.24);
+
+      .title {
+        margin-top: 12px;
+        @include text(18px);
+        color: white;
+      }
+
+      .info {
+        margin-bottom: 0;
+        color: darken(white, $amount: 2);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+
+    .category {
+      position: absolute;
+      top: 12px;
+      right: 16px;
+      border-color: darken($color-communication, 12);
+      color: darken($color-communication, 12);
+
+      &.category--communication {
+        background: fade-out(white, 0.2);
+      }
+    }
+
+    &:hover {
+      .card__content {
+        height: 41%;
+
+        .info {
+          white-space: normal;
+          text-overflow: clip;
+        }
+      }
+    }
+  }
+
+  .more-button {
+    a {
+      border-color: $color-communication;
+      color: darken($color-communication, 12);
+      background: fade-out($color-communication, 0.88);
+    }
+  }
+}
+
+.convoyMain .card .cardDriverImage {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.list-enter-active,
+.list-leave-active {
+  transition: all 0.8s;
+  /* opacity: 1; */
+}
+.list-enter, .list-leave-to
+/* .list-leave-active for below version 2.1.8 */ {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.list-leave-active {
+  position: absolute;
+}
+
+.list-enter-to,
+.list-leave {
+  opacity: 1;
+}
+
+.list-move {
+  transition: all 0.8s;
+}

@@ -1,0 +1,36 @@
+@import "./variable";
+
+@function font($font-size: 16px) {
+  @return $font-size / $base-font-size * 1rem;
+}
+@function line($fontSize) {
+  @return $fontSize * 1.6;
+}
+
+@mixin text($font-size: 16px) {
+  font-size: font($font-size);
+  line-height: line(font($font-size));
+}
+
+@mixin size($w, $h: $w) {
+  width: $w;
+  height: $h;
+}
+
+@mixin rwd($breakpoint) {
+  @media (max-width: $breakpoint - 1px) {
+    @content;
+  }
+}
+
+%center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1370px;
+  }
+}

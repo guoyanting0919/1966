@@ -1,0 +1,61 @@
+.driver,
+.convoy {
+  .line {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 60px;
+      height: 1px;
+      background-color: #efc94c;
+      top: -2px;
+    }
+  }
+
+  .siteMenu {
+    align-items: center;
+    flex-wrap: wrap;
+    width: 70%;
+    justify-content: flex-start;
+
+    li {
+      padding: 8px 24px;
+      color: #eeb700;
+      border: 1px solid #efc94c;
+      border-radius: 4px;
+      background: rgba(239, 201, 76, 0.08);
+      margin-right: 1rem;
+      margin-bottom: 1rem;
+      cursor: pointer;
+    }
+
+    .activeList {
+      background: #efc94c;
+      color: #fff;
+    }
+  }
+
+  .linkClass {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+
+    &:hover {
+      background-color: transparent;
+      color: #000;
+    }
+  }
+
+  .router-link-active {
+    color: #eeb700;
+    pointer-events: none;
+  }
+
+  .convoyMain h3,
+  .driverMain h3 {
+    font-size: 1.5rem;
+  }
+}

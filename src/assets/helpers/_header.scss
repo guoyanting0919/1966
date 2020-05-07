@@ -1,0 +1,41 @@
+.header {
+
+  .header-flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.logo {
+  padding: 10px 0;
+
+  img {
+    height: 60px;
+  }
+}
+
+.navbar {
+  margin: 0;
+  padding: 0;
+
+  ul {
+    display: flex;
+    min-height: auto;
+  }
+
+  a {
+    display: inline-block;
+    padding: 6px 16px;
+    border-radius: 18px;
+
+    &.active {
+      color: white;
+      background: $color-primary;
+    }
+  }
+
+  i {
+    margin-right: -8px;
+  }
+}

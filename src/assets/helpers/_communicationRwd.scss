@@ -1,0 +1,179 @@
+// Extra large devices (large desktops, 1200px and up)
+@media (max-width: $ExtraLargeDevices) {
+  .driverMain,
+  .convoyMain {
+    .card {
+      &:hover {
+        .card__content {
+          height: 40%;
+        }
+      }
+    }
+
+    .card {
+      height: 450px;
+    }
+
+    .card .card__content {
+      height: 40%;
+    }
+
+    .card .card__content .info {
+      text-overflow: inherit;
+      white-space: inherit;
+    }
+
+    .card .cardDriverImage {
+      height: 60%;
+    }
+
+    .card .category {
+      letter-spacing: 1px;
+      padding: 0 3px;
+      right: 8px;
+    }
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (max-width: $LargeDevices) {
+  .driverMain,
+  .convoyMain {
+    .card {
+      &:hover {
+        .card__content {
+          height: 30%;
+        }
+      }
+    }
+
+    .card {
+      height: 450px;
+    }
+
+    .card .card__content {
+      height: 30%;
+    }
+
+    .card .card__content .info {
+      text-overflow: inherit;
+      white-space: inherit;
+    }
+
+    .card .cardDriverImage {
+      height: 70%;
+    }
+
+    .card .category {
+      letter-spacing: 1px;
+      padding: 0 3px;
+      right: 8px;
+    }
+
+    .card .category {
+      right: 16px;
+      padding: 0 6px;
+    }
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (max-width: $MediumDevices) {
+  .driverMain,
+  .convoyMain {
+    .card {
+      &:hover {
+        .card__content {
+          height: 35%;
+        }
+      }
+    }
+
+    .card {
+      height: 450px;
+    }
+
+    .card .card__content {
+      height: 35%;
+    }
+
+    .card .card__content .info {
+      text-overflow: inherit;
+      white-space: inherit;
+    }
+
+    .card .cardDriverImage {
+      height: 65%;
+    }
+
+    .card .category {
+      letter-spacing: 1px;
+      padding: 0 3px;
+      right: 8px;
+    }
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (max-width: $SmallDevices) {
+  .driver .siteMenu,
+  .convoy .siteMenu {
+    width: 59%;
+
+    & li {
+      padding: 4px 8px;
+      margin-right: 0.5rem;
+    }
+  }
+  .driverMain,
+  .convoyMain {
+    .card.communication {
+      width: 80%;
+      margin: auto;
+    }
+
+    .card {
+      &:hover {
+        .card__content {
+          height: 15%;
+        }
+      }
+    }
+
+    .card {
+      height: 320px;
+    }
+
+    .card .card__content {
+      height: 15%;
+    }
+
+    .card .card__content .info {
+      text-overflow: inherit;
+      white-space: inherit;
+      display: none;
+    }
+
+    .card .cardDriverImage {
+      height: 85%;
+    }
+
+    .card .category {
+      letter-spacing: 1px;
+      padding: 0 3px;
+      right: 8px;
+    }
+
+    .card .card__content .title {
+      margin-top: 0;
+    }
+
+    .card.communication {
+      width: 100%;
+    }
+  }
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: $ExtraSmallDevices) {
+}
