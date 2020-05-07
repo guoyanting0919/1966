@@ -1,5 +1,5 @@
 <template>
-  <h1>ConvoyDetail11111</h1>
+  <h1>ConvoyDetail11xxxxxxx111</h1>
 </template>
 
 <script>
