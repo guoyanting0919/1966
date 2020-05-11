@@ -3,59 +3,26 @@
     <header class="header">
       <div class="personalContainer">
         <div class="header-flex-container">
-          <div class="logo">
+          <div class="logo" @click="toHome">
             <img src="../assets/img/logo-dark.png" alt />
           </div>
 
           <nav class="navbar">
             <ul>
               <li>
-                <a href="#">最新消息</a>
+                <router-link :to="{ name: 'North' }" class="navRouter">北部地區</router-link>
               </li>
               <li>
-                <a href="#">關於我們</a>
+                <router-link :to="{ name: 'Central' }" class="navRouter">中部地區</router-link>
               </li>
               <li>
-                <a href="#">
-                  交通服務
-                  <i class="icon-down"></i>
-                </a>
+                <router-link :to="{ name: 'South' }" class="navRouter">南部地區</router-link>
               </li>
               <li>
-                <a href="#" class="active">
-                  銀髮旅遊
-                  <i class="icon-down"></i>
-                </a>
+                <router-link :to="{ name: 'East' }" class="navRouter">東部地區</router-link>
               </li>
               <li>
-                <a href="#">
-                  照護服務
-                  <i class="icon-down"></i>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  智慧輔具
-                  <i class="icon-down"></i>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  在地商城
-                  <i class="icon-down"></i>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  活動快訊
-                  <i class="icon-down"></i>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  募資計畫
-                  <i class="icon-down"></i>
-                </a>
+                <a href="#" class="navRouter">回到1966</a>
               </li>
             </ul>
           </nav>
@@ -67,7 +34,17 @@
 
 <script>
 export default {
-  name: "HeaderComponents"
+  name: "HeaderComponents",
+  methods: {
+    toHome() {
+      let route = this.$route.name;
+      if (route === "Home") {
+        return false;
+      } else {
+        this.$router.push("/");
+      }
+    }
+  }
 };
 </script>
 

@@ -24,12 +24,13 @@ export default {
   methods: {
     toDriverDetail(id) {
       let route = this.$route.name;
-      // console.log(this.router);
-      if (route === "Driver") {
-        this.$router.push({ name: "DriverDetail", params: { id } });
-      } else if (route === "Convoy") {
-        this.$router.push({ name: "ConvoyDetail", params: { id } });
-      }
+      console.log(route);
+      this.$router.push({ name: `${route}DriverDetail`, params: { id } });
+      // if (route === "Driver") {
+      //   this.$router.push({ name: "DriverDetail", params: { id } });
+      // } else if (route === "Convoy") {
+      //   this.$router.push({ name: "ConvoyDetail", params: { id } });
+      // }
     }
   }
 };

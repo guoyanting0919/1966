@@ -79,6 +79,7 @@
       .title {
         margin-top: 12px;
         @include text(18px);
+        font-weight: 700;
         color: white;
       }
 

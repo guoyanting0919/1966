@@ -1,0 +1,65 @@
+.home {
+  .homeImg {
+    width: 100vw;
+    height: calc(100vh - 80px);
+    background-color: aquamarine;
+    background-image: url("../assets/img/kristina-knut-OGgCwHXr9sc-unsplash.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .wrap {
+      width: 100%;
+      height: 100%;
+      background-color: rgba($color: #000000, $alpha: 0.5);
+      // background-image: linear-gradient(to right, #f9d423 0%, #ff4e50 100%);
+      // background-image: linear-gradient();
+      // opacity: 0.9;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+      overflow: hidden;
+    }
+  }
+
+  .btnContainer {
+    // cursor: pointer;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .startBtn {
+    cursor: pointer;
+    background-color: rgba(#efc94c, 0.65);
+    font-weight: 700;
+    animation: breath 0.6s linear infinite alternate;
+    font-size: 2rem;
+    width: 180px;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50% 50%;
+    margin-bottom: 5rem;
+    position: relative;
+    transition: 0.5s;
+
+    &::after {
+      position: absolute;
+      content: "開始預約";
+      width: 110%;
+      height: 110%;
+      background-color: rgba(#efc94c, 0.4);
+      animation-delay: 0.5s;
+      animation: breath 0.6s linear infinite alternate;
+      border-radius: 50% 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: 0.5s;
+    }
+  }
+}

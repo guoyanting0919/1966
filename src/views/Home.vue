@@ -1,7 +1,12 @@
 <template>
   <div class="home">
-    <!-- <HeaderComponents /> -->
-    <router-view></router-view>
+    <div class="homeImg">
+      <div class="wrap">
+        <div class="btnContainer">
+          <div @click="toNorth" class="startBtn">開始預約</div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -13,6 +18,13 @@ export default {
   name: "Home",
   components: {
     HeaderComponents
+  },
+  methods: {
+    toNorth() {
+      this.$router.push({ name: "North" });
+    }
   }
 };
 </script>
+<style lang="scss" scoped>
+</style>
